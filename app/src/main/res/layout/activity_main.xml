@@ -7,8 +7,15 @@
     tools:context=".MainActivity">
 
 
+    <ImageView
+        android:src="@drawable/bg_frog"
+        android:scaleType="fitXY"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
 <!--Content of Flagment-->
     <FrameLayout
+
         android:id="@+id/contentMainflagment"
         android:layout_height="match_parent"
         android:layout_width="match_parent"/>
