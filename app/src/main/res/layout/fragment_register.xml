@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--ToolBar-->
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbarRegister"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"/>
+
+    <!--Content-->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_margin="30dp"
+            android:background="@drawable/bgregister"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!--Photo-->
+            <ImageView
+                android:id="@+id/imvPhoto"
+                android:layout_gravity="center"
+                android:background="@drawable/if_add_user"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <!--Name-->
+            <EditText
+                android:layout_marginTop="20dp"
+                android:background="@drawable/displayname"
+                android:hint="  Name : "
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <!--User-->
+            <EditText
+                android:layout_marginTop="10dp"
+                android:background="@drawable/txtemail"
+                android:hint="   Email : "
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <!--Password-->
+            <EditText
+                android:layout_marginTop="10dp"
+                android:background="@drawable/txtpassword"
+                android:hint="   Password : "
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

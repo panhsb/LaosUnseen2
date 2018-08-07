@@ -3,6 +3,8 @@ package la.edu.homsombathnuol.k.laosunseen;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
+import la.edu.homsombathnuol.k.laosunseen.fragment.MainFragment;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override

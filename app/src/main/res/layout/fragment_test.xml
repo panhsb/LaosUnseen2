@@ -5,7 +5,7 @@
 
 
     <LinearLayout
-        android:layout_marginTop="50px"
+        android:layout_margin="@dimen/margin_bglogin"
         android:background="@drawable/bg_loginh"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -22,14 +22,14 @@
 android:background="@drawable/txtemail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Email : example@mail.com"
+            android:hint="   Email : example@mail.com"
             android:inputType="textEmailAddress" />
         <!--Password-->
         <EditText
 android:background="@drawable/txtpassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Password"
+            android:hint="   Password"
             android:inputType="numberPassword" />
         <!--Login-->
         <Button
@@ -40,10 +40,16 @@ android:background="@drawable/btnlogin"
             />
         <!--Register-->
         <TextView
-            android:text="New Register"
-            android:layout_gravity="center"
+            android:id="@+id/txtRegister"
+            android:clickable="true"
+            android:textSize="@dimen/h2"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/colorAccent"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:text="New Register" />
 
 
     </LinearLayout>
