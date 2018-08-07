@@ -8,8 +8,8 @@
 
 
     <ImageView
-        android:src="@drawable/bg_frog"
-        android:scaleType="fitXY"
+        android:src="@drawable/walpaper"
+        android:scaleType="centerCrop"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
