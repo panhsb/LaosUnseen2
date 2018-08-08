@@ -10,6 +10,7 @@ import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -41,9 +42,8 @@ public class RegisterFragment extends Fragment {
     private Uri uri;
     private ImageView imageView;
     private boolean aBoolean = true;
-    private String nameString;
-    private String emailString;
-    private String passwordString;
+    private String nameString, emailString, passwordString,
+            uidString, pathURLString, myPostString;
 
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
@@ -96,29 +96,34 @@ public class RegisterFragment extends Fragment {
         } else {
 //No Space
             createAuthentication();
-            uploadPhotoToFirebase();
+           uploadPhotoToFirebase();
         }
 
     }
 
     private void createAuthentication() {
-
-        FirebaseAuth firebaseAuth = FirebaseAuth.getInstance();
+        Log.d("8AugV1","Greating Authen Work");
+        final FirebaseAuth firebaseAuth = FirebaseAuth.getInstance();
         firebaseAuth.createUserWithEmailAndPassword(emailString, passwordString)
                 .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
 
                         if(task.isSuccessful()){
-                            Toast.makeText(getActivity(),"Register Successful",Toast.LENGTH_SHORT);
+
+                            uidString = firebaseAuth.getCurrentUser().getUid();
+                            Log.d("8AugV1","uriString ==>" + uidString);
+
                         }else {
                             MyAlert myAlert = new MyAlert(getActivity());
                             myAlert.nomalDialog("Cannot Register",
-                                    "Because ==>" +task.getException().getMessage());
+                                    "Because ==>" + task.getException().getMessage());
                         }
 
                     }
                 });
+
+
 
 
     }
@@ -132,16 +137,22 @@ public class RegisterFragment extends Fragment {
         storageReference1.putFile(uri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
             @Override
             public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
-                Toast.makeText(getActivity(),"Success Upload Photo",Toast.LENGTH_SHORT);
+                Toast.makeText(getActivity(),"Success Upload Photo",Toast.LENGTH_SHORT).show();
+
+                findPathUrlPhoto();
             }
         }).addOnFailureListener(new OnFailureListener() {
             @Override
             public void onFailure(@NonNull Exception e) {
-                Toast.makeText(getActivity(),"Cannot Upload Photo",Toast.LENGTH_SHORT);
+                Toast.makeText(getActivity(),"Cannot Upload Photo",Toast.LENGTH_SHORT).show();
             }
         });
 
     }//UploadPhoto
+
+    private void findPathUrlPhoto() {
+
+    }
 
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
