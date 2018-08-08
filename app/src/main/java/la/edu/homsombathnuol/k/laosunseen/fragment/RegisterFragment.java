@@ -5,7 +5,6 @@ import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
-import android.os.Binder;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -19,13 +18,17 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import java.util.Collections;
+
 import la.edu.homsombathnuol.k.laosunseen.MainActivity;
 import la.edu.homsombathnuol.k.laosunseen.R;
+import la.edu.homsombathnuol.k.laosunseen.utility.MyAlert;
 
 public class RegisterFragment extends Fragment {
 
     private Uri uri;
     private ImageView imageView;
+    private boolean aBoolean = true;
 
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
@@ -47,9 +50,20 @@ public class RegisterFragment extends Fragment {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         if(item.getItemId() == R.id.itemUpload){
+            uploadProcess();
             return true;
+            
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    private void uploadProcess() {
+//        Check Choose Photo
+        if(aBoolean){
+//            Non Choose Photo
+            MyAlert myAlert = new MyAlert(getActivity());
+            myAlert.nomalDialog("Non Choose Photo","Please Chosse Photo");
+        }
     }
 
     @Override
