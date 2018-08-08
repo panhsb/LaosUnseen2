@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "720223063313",
+    "firebase_url": "https://laosunseen-ed9f5.firebaseio.com",
+    "project_id": "laosunseen-ed9f5",
+    "storage_bucket": "laosunseen-ed9f5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:720223063313:android:c74f0571caa27186",
+        "android_client_info": {
+          "package_name": "la.edu.homsombathnuol.k.laosunseen"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "720223063313-rjvbjfc292bo4b29m6be3mvh22a3us00.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "la.edu.homsombathnuol.k.laosunseen",
+            "certificate_hash": "98511b8daac90ecbcef308d2f6830bbc1fccdd03"
+          }
+        },
+        {
+          "client_id": "720223063313-bhl14b71fcf0o2btc09hhknkjjdai989.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDE0Lfu-PJxKNr7VJTvXKVxFTG6kViUJfM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "720223063313-bhl14b71fcf0o2btc09hhknkjjdai989.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

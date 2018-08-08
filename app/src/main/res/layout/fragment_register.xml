@@ -33,6 +33,8 @@
 
             <!--Name-->
             <EditText
+                android:inputType="text"
+                android:id="@+id/edtName"
                 android:layout_marginTop="20dp"
                 android:background="@drawable/displayname"
                 android:hint="  Name : "
@@ -41,6 +43,8 @@
 
             <!--User-->
             <EditText
+                android:inputType="textEmailAddress"
+                android:id="@+id/edtEmail"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/txtemail"
                 android:hint="   Email : "
@@ -49,6 +53,8 @@
 
             <!--Password-->
             <EditText
+                android:inputType="text"
+                android:id="@+id/edtPassword"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/txtpassword"
                 android:hint="   Password : "
