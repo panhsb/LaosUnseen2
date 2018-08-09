@@ -34,8 +34,7 @@
                                   <option name="values">
                                     <map>
                                       <entry key="imageAsset" value="D:\Acc\Training\outline-backup-24px.svg" />
-                                      <entry key="outputName" value="ic_action_sign_out" />
-                                      <entry key="theme" value="HOLO_DARK" />
+                                      <entry key="outputName" value="ic_action_sign_out_back" />
                                       <entry key="themeColor" value="e50104" />
                                     </map>
                                   </option>

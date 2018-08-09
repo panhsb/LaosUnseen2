@@ -106,6 +106,7 @@ public class MainFragment extends Fragment {
     private void moveToService() {
 
         startActivity(new Intent(getActivity(), ServiceActivity.class));
+        getActivity().finish();
 
     }
 
@@ -114,7 +115,6 @@ public class MainFragment extends Fragment {
         textView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 //Replace Fragment
                 getActivity()
                         .getSupportFragmentManager()
