@@ -5,51 +5,53 @@
 
 
     <LinearLayout
-        android:layout_margin="@dimen/margin_bglogin"
-        android:background="@drawable/bg_loginh"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_bglogin"
+        android:background="@drawable/bg_loginh"
         android:orientation="vertical">
 
         <!--Logo-->
         <ImageView
-            android:layout_gravity="center"
-
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+
+            android:layout_height="wrap_content"
+            android:layout_gravity="center" />
         <!--User-->
         <EditText
-android:background="@drawable/txtemail"
+            android:id="@+id/edtEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@drawable/txtemail"
             android:hint="   Email : example@mail.com"
             android:inputType="textEmailAddress" />
         <!--Password-->
         <EditText
-android:background="@drawable/txtpassword"
+            android:id="@+id/edtPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@drawable/txtpassword"
             android:hint="   Password"
-            android:inputType="numberPassword" />
+            android:inputType="textPassword" />
         <!--Login-->
         <Button
-android:background="@drawable/btnlogin"
+            android:id="@+id/btnLogin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Login"
-            />
+            android:background="@drawable/btnlogin"
+            android:text="Login" />
         <!--Register-->
         <TextView
             android:id="@+id/txtRegister"
-            android:clickable="true"
-            android:textSize="@dimen/h2"
-            android:textStyle="bold"
-            android:layout_marginTop="10dp"
-            android:textColor="@color/colorAccent"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_gravity="center_horizontal"
-            android:text="New Register" />
+            android:layout_marginTop="10dp"
+            android:clickable="true"
+            android:text="New Register"
+            android:textColor="@color/colorAccent"
+            android:textSize="@dimen/h2"
+            android:textStyle="bold" />
 
 
     </LinearLayout>

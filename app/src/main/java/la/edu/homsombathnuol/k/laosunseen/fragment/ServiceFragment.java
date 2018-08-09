@@ -24,38 +24,8 @@ public class ServiceFragment extends Fragment {
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 
-//        Create Toolbar
-        createToolbar();
 
     }//Main Method
-
-    @Override
-    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
-        super.onCreateOptionsMenu(menu, inflater);
-        inflater.inflate(R.menu.menu_service, menu);
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        if (item.getItemId() == R.id.itemService) {
-            signOut();
-            return true;
-        }
-        return super.onOptionsItemSelected(item);
-    }
-
-    private void signOut() {
-        FirebaseAuth firebaseAuth = FirebaseAuth.getInstance();
-        firebaseAuth.signOut();
-        getActivity().finish();
-    }
-
-
-    private void createToolbar() {
-        Toolbar toolbar = getView().findViewById(R.id.toolbarService);
-        ((MainActivity) getActivity()).setSupportActionBar(toolbar);
-        setHasOptionsMenu(true);
-    }
 
     @Nullable
     @Override
@@ -63,6 +33,7 @@ public class ServiceFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_service, container, false);
         return view;
     }
+
 
 
 }
