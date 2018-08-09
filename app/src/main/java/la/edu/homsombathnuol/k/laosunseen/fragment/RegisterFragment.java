@@ -151,8 +151,31 @@ public class RegisterFragment extends Fragment {
     }//UploadPhoto
 
     private void findPathUrlPhoto() {
+        try {
+            FirebaseStorage firebaseStorage = FirebaseStorage.getInstance();
+            StorageReference storageReference = firebaseStorage.getReference();
+            final String[] urlString = new String[1];
+            storageReference.child("Avata").child(nameString)
+                    .getDownloadUrl()
+                    .addOnSuccessListener(new OnSuccessListener<Uri>() {
+                        @Override
+                        public void onSuccess(Uri uri) {
+                            urlString[0] = uri.toString();
+                            pathURLString = urlString[0];
+                            Log.d("9AugV1", "PrintURL ==>" + pathURLString);
+                        }
+                    }).addOnFailureListener(new OnFailureListener() {
+                @Override
+                public void onFailure(@NonNull Exception e) {
+                    Log.d("9AugV1","Error ==>" + e.toString());
+                }
+            });
 
-    }
+
+         } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }//FindPath
 
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
